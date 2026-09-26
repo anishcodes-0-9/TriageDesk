@@ -1,0 +1,2622 @@
+{
+  "startedAt": "2026-09-26T19:39:18.214Z",
+  "passes": 3,
+  "records": [
+    {
+      "caseId": "official-01",
+      "pass": 1,
+      "status": "completed",
+      "category": "Sales",
+      "priority": "High",
+      "owner": "Sales Team",
+      "needsReview": false,
+      "escalated": false,
+      "adjustmentFields": [],
+      "evidenceCount": 1,
+      "checks": [
+        {
+          "name": "category",
+          "verdict": "conforms",
+          "detail": "got Sales, allowed Sales"
+        },
+        {
+          "name": "priority",
+          "verdict": "conforms",
+          "detail": "got High, allowed Medium | High"
+        },
+        {
+          "name": "owner_consistency",
+          "verdict": "conforms",
+          "detail": "owner Sales Team for category Sales"
+        },
+        {
+          "name": "evidence_validity",
+          "verdict": "conforms",
+          "detail": "1/1 quotes verified"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "Other-implies-review holds (needsReview false)"
+        }
+      ],
+      "verdict": "conforms",
+      "durationMs": 2157
+    },
+    {
+      "caseId": "official-02",
+      "pass": 1,
+      "status": "completed",
+      "category": "Technical",
+      "priority": "Urgent",
+      "owner": "Engineering",
+      "needsReview": false,
+      "escalated": false,
+      "adjustmentFields": [],
+      "evidenceCount": 2,
+      "checks": [
+        {
+          "name": "category",
+          "verdict": "conforms",
+          "detail": "got Technical, allowed Technical"
+        },
+        {
+          "name": "priority",
+          "verdict": "conforms",
+          "detail": "got Urgent, allowed Urgent"
+        },
+        {
+          "name": "owner_consistency",
+          "verdict": "conforms",
+          "detail": "owner Engineering for category Technical"
+        },
+        {
+          "name": "safety_override",
+          "verdict": "conforms",
+          "detail": "Technical/Urgent/Engineering"
+        },
+        {
+          "name": "evidence_validity",
+          "verdict": "conforms",
+          "detail": "2/2 quotes verified"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "Other-implies-review holds (needsReview false)"
+        }
+      ],
+      "verdict": "conforms",
+      "durationMs": 1858
+    },
+    {
+      "caseId": "official-03",
+      "pass": 1,
+      "status": "completed",
+      "category": "Billing",
+      "priority": "High",
+      "owner": "Finance",
+      "needsReview": false,
+      "escalated": false,
+      "adjustmentFields": [],
+      "evidenceCount": 1,
+      "checks": [
+        {
+          "name": "category",
+          "verdict": "conforms",
+          "detail": "got Billing, allowed Billing"
+        },
+        {
+          "name": "priority",
+          "verdict": "conforms",
+          "detail": "got High, allowed High"
+        },
+        {
+          "name": "owner_consistency",
+          "verdict": "conforms",
+          "detail": "owner Finance for category Billing"
+        },
+        {
+          "name": "evidence_validity",
+          "verdict": "conforms",
+          "detail": "1/1 quotes verified"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "Other-implies-review holds (needsReview false)"
+        }
+      ],
+      "verdict": "conforms",
+      "durationMs": 2091
+    },
+    {
+      "caseId": "official-04",
+      "pass": 1,
+      "status": "completed",
+      "category": "Support",
+      "priority": "Low",
+      "owner": "Client Success",
+      "needsReview": false,
+      "escalated": false,
+      "adjustmentFields": [],
+      "evidenceCount": 1,
+      "checks": [
+        {
+          "name": "category",
+          "verdict": "conforms",
+          "detail": "got Support, allowed Support"
+        },
+        {
+          "name": "priority",
+          "verdict": "conforms",
+          "detail": "got Low, allowed Low"
+        },
+        {
+          "name": "owner_consistency",
+          "verdict": "conforms",
+          "detail": "owner Client Success for category Support"
+        },
+        {
+          "name": "evidence_validity",
+          "verdict": "conforms",
+          "detail": "1/1 quotes verified"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "Other-implies-review holds (needsReview false)"
+        }
+      ],
+      "verdict": "conforms",
+      "durationMs": 1875
+    },
+    {
+      "caseId": "official-05",
+      "pass": 1,
+      "status": "completed",
+      "category": "Technical",
+      "priority": "Urgent",
+      "owner": "Engineering",
+      "needsReview": true,
+      "escalated": true,
+      "adjustmentFields": [],
+      "evidenceCount": 2,
+      "checks": [
+        {
+          "name": "category",
+          "verdict": "conforms",
+          "detail": "got Technical, allowed Technical"
+        },
+        {
+          "name": "priority",
+          "verdict": "conforms",
+          "detail": "got Urgent, allowed Urgent"
+        },
+        {
+          "name": "owner_consistency",
+          "verdict": "conforms",
+          "detail": "owner Engineering for category Technical"
+        },
+        {
+          "name": "safety_override",
+          "verdict": "conforms",
+          "detail": "Technical/Urgent/Engineering"
+        },
+        {
+          "name": "evidence_validity",
+          "verdict": "conforms",
+          "detail": "2/2 quotes verified"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "Other-implies-review holds (needsReview true)"
+        },
+        {
+          "name": "review_state",
+          "verdict": "does_not_conform",
+          "detail": "needsReview true, expected false",
+          "cause": "prompt_model_judgment"
+        }
+      ],
+      "verdict": "does_not_conform",
+      "durationMs": 2295
+    },
+    {
+      "caseId": "official-06",
+      "pass": 1,
+      "status": "completed",
+      "category": "Sales",
+      "priority": "Medium",
+      "owner": "Sales Team",
+      "needsReview": false,
+      "escalated": false,
+      "adjustmentFields": [],
+      "evidenceCount": 1,
+      "checks": [
+        {
+          "name": "category",
+          "verdict": "conforms",
+          "detail": "got Sales, allowed Sales"
+        },
+        {
+          "name": "priority",
+          "verdict": "conforms",
+          "detail": "got Medium, allowed Medium | High"
+        },
+        {
+          "name": "owner_consistency",
+          "verdict": "conforms",
+          "detail": "owner Sales Team for category Sales"
+        },
+        {
+          "name": "evidence_validity",
+          "verdict": "conforms",
+          "detail": "1/1 quotes verified"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "Other-implies-review holds (needsReview false)"
+        }
+      ],
+      "verdict": "conforms",
+      "durationMs": 1687
+    },
+    {
+      "caseId": "unseen-support-howto",
+      "pass": 1,
+      "status": "completed",
+      "category": "Support",
+      "priority": "Low",
+      "owner": "Client Success",
+      "needsReview": false,
+      "escalated": false,
+      "adjustmentFields": [],
+      "evidenceCount": 1,
+      "checks": [
+        {
+          "name": "category",
+          "verdict": "conforms",
+          "detail": "got Support, allowed Support"
+        },
+        {
+          "name": "priority",
+          "verdict": "conforms",
+          "detail": "got Low, allowed Low | Medium"
+        },
+        {
+          "name": "owner_consistency",
+          "verdict": "conforms",
+          "detail": "owner Client Success for category Support"
+        },
+        {
+          "name": "evidence_validity",
+          "verdict": "conforms",
+          "detail": "1/1 quotes verified"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "Other-implies-review holds (needsReview false)"
+        }
+      ],
+      "verdict": "conforms",
+      "durationMs": 1903
+    },
+    {
+      "caseId": "unseen-billing-credit",
+      "pass": 1,
+      "status": "completed",
+      "category": "Billing",
+      "priority": "Low",
+      "owner": "Finance",
+      "needsReview": false,
+      "escalated": false,
+      "adjustmentFields": [],
+      "evidenceCount": 1,
+      "checks": [
+        {
+          "name": "category",
+          "verdict": "conforms",
+          "detail": "got Billing, allowed Billing"
+        },
+        {
+          "name": "priority",
+          "verdict": "conforms",
+          "detail": "got Low, allowed Low | Medium"
+        },
+        {
+          "name": "owner_consistency",
+          "verdict": "conforms",
+          "detail": "owner Finance for category Billing"
+        },
+        {
+          "name": "evidence_validity",
+          "verdict": "conforms",
+          "detail": "1/1 quotes verified"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "Other-implies-review holds (needsReview false)"
+        }
+      ],
+      "verdict": "conforms",
+      "durationMs": 1855
+    },
+    {
+      "caseId": "unseen-sales-demo",
+      "pass": 1,
+      "status": "completed",
+      "category": "Sales",
+      "priority": "High",
+      "owner": "Sales Team",
+      "needsReview": false,
+      "escalated": false,
+      "adjustmentFields": [],
+      "evidenceCount": 1,
+      "checks": [
+        {
+          "name": "category",
+          "verdict": "conforms",
+          "detail": "got Sales, allowed Sales"
+        },
+        {
+          "name": "priority",
+          "verdict": "conforms",
+          "detail": "got High, allowed Medium | High"
+        },
+        {
+          "name": "owner_consistency",
+          "verdict": "conforms",
+          "detail": "owner Sales Team for category Sales"
+        },
+        {
+          "name": "evidence_validity",
+          "verdict": "conforms",
+          "detail": "1/1 quotes verified"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "Other-implies-review holds (needsReview false)"
+        }
+      ],
+      "verdict": "conforms",
+      "durationMs": 2073
+    },
+    {
+      "caseId": "unseen-technical-bug",
+      "pass": 1,
+      "status": "completed",
+      "category": "Technical",
+      "priority": "Medium",
+      "owner": "Engineering",
+      "needsReview": false,
+      "escalated": false,
+      "adjustmentFields": [],
+      "evidenceCount": 1,
+      "checks": [
+        {
+          "name": "category",
+          "verdict": "conforms",
+          "detail": "got Technical, allowed Technical"
+        },
+        {
+          "name": "priority",
+          "verdict": "conforms",
+          "detail": "got Medium, allowed Medium | High"
+        },
+        {
+          "name": "owner_consistency",
+          "verdict": "conforms",
+          "detail": "owner Engineering for category Technical"
+        },
+        {
+          "name": "evidence_validity",
+          "verdict": "conforms",
+          "detail": "1/1 quotes verified"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "Other-implies-review holds (needsReview false)"
+        }
+      ],
+      "verdict": "conforms",
+      "durationMs": 1745
+    },
+    {
+      "caseId": "unseen-support-permission",
+      "pass": 1,
+      "status": "completed",
+      "category": "Support",
+      "priority": "Medium",
+      "owner": "Client Success",
+      "needsReview": false,
+      "escalated": false,
+      "adjustmentFields": [],
+      "evidenceCount": 0,
+      "checks": [
+        {
+          "name": "category",
+          "verdict": "conforms",
+          "detail": "got Support, allowed Support"
+        },
+        {
+          "name": "priority",
+          "verdict": "conforms",
+          "detail": "got Medium, allowed Medium | High"
+        },
+        {
+          "name": "owner_consistency",
+          "verdict": "conforms",
+          "detail": "owner Client Success for category Support"
+        },
+        {
+          "name": "evidence_validity",
+          "verdict": "conforms",
+          "detail": "0/0 quotes verified"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "Other-implies-review holds (needsReview false)"
+        }
+      ],
+      "verdict": "conforms",
+      "durationMs": 1787
+    },
+    {
+      "caseId": "unseen-billing-suspension",
+      "pass": 1,
+      "status": "completed",
+      "category": "Billing",
+      "priority": "High",
+      "owner": "Finance",
+      "needsReview": false,
+      "escalated": false,
+      "adjustmentFields": [],
+      "evidenceCount": 1,
+      "checks": [
+        {
+          "name": "category",
+          "verdict": "conforms",
+          "detail": "got Billing, allowed Billing"
+        },
+        {
+          "name": "priority",
+          "verdict": "conforms",
+          "detail": "got High, allowed High | Urgent"
+        },
+        {
+          "name": "owner_consistency",
+          "verdict": "conforms",
+          "detail": "owner Finance for category Billing"
+        },
+        {
+          "name": "evidence_validity",
+          "verdict": "conforms",
+          "detail": "1/1 quotes verified"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "Other-implies-review holds (needsReview false)"
+        }
+      ],
+      "verdict": "conforms",
+      "durationMs": 1838
+    },
+    {
+      "caseId": "edge-injection",
+      "pass": 1,
+      "status": "completed",
+      "category": "Sales",
+      "priority": "Medium",
+      "owner": "Sales Team",
+      "needsReview": true,
+      "escalated": false,
+      "adjustmentFields": [],
+      "evidenceCount": 1,
+      "checks": [
+        {
+          "name": "category",
+          "verdict": "conforms",
+          "detail": "got Sales, allowed Sales"
+        },
+        {
+          "name": "priority",
+          "verdict": "conforms",
+          "detail": "got Medium, allowed Low | Medium"
+        },
+        {
+          "name": "owner_consistency",
+          "verdict": "conforms",
+          "detail": "owner Sales Team for category Sales"
+        },
+        {
+          "name": "safety_override",
+          "verdict": "conforms",
+          "detail": "no escalation, no policy adjustment"
+        },
+        {
+          "name": "evidence_validity",
+          "verdict": "conforms",
+          "detail": "1/1 quotes verified"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "Other-implies-review holds (needsReview true)"
+        }
+      ],
+      "verdict": "conforms",
+      "durationMs": 1746
+    },
+    {
+      "caseId": "edge-vague",
+      "pass": 1,
+      "status": "completed",
+      "category": "Support",
+      "priority": "Medium",
+      "owner": "Client Success",
+      "needsReview": true,
+      "escalated": false,
+      "adjustmentFields": [],
+      "evidenceCount": 0,
+      "checks": [
+        {
+          "name": "category",
+          "verdict": "conforms",
+          "detail": "got Support, allowed Support | Other"
+        },
+        {
+          "name": "priority",
+          "verdict": "conforms",
+          "detail": "got Medium, allowed Low | Medium"
+        },
+        {
+          "name": "owner_consistency",
+          "verdict": "conforms",
+          "detail": "owner Client Success for category Support"
+        },
+        {
+          "name": "evidence_validity",
+          "verdict": "conforms",
+          "detail": "0/0 quotes verified"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "Other-implies-review holds (needsReview true)"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "needsReview true, expected true"
+        }
+      ],
+      "verdict": "conforms",
+      "durationMs": 1638
+    },
+    {
+      "caseId": "edge-negation",
+      "pass": 1,
+      "status": "completed",
+      "category": "Billing",
+      "priority": "Medium",
+      "owner": "Finance",
+      "needsReview": false,
+      "escalated": false,
+      "adjustmentFields": [],
+      "evidenceCount": 1,
+      "checks": [
+        {
+          "name": "category",
+          "verdict": "conforms",
+          "detail": "got Billing, allowed Billing | Support"
+        },
+        {
+          "name": "priority",
+          "verdict": "conforms",
+          "detail": "got Medium, allowed Low | Medium"
+        },
+        {
+          "name": "owner_consistency",
+          "verdict": "conforms",
+          "detail": "owner Finance for category Billing"
+        },
+        {
+          "name": "safety_override",
+          "verdict": "conforms",
+          "detail": "no escalation, no policy adjustment"
+        },
+        {
+          "name": "evidence_validity",
+          "verdict": "conforms",
+          "detail": "1/1 quotes verified"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "Other-implies-review holds (needsReview false)"
+        }
+      ],
+      "verdict": "conforms",
+      "durationMs": 1871
+    },
+    {
+      "caseId": "edge-mixed-intent",
+      "pass": 1,
+      "status": "completed",
+      "category": "Sales",
+      "priority": "High",
+      "owner": "Sales Team",
+      "needsReview": true,
+      "escalated": false,
+      "adjustmentFields": [],
+      "evidenceCount": 1,
+      "checks": [
+        {
+          "name": "category",
+          "verdict": "does_not_conform",
+          "detail": "got Sales, allowed Billing",
+          "cause": "prompt_model_judgment"
+        },
+        {
+          "name": "priority",
+          "verdict": "conforms",
+          "detail": "got High, allowed Medium | High"
+        },
+        {
+          "name": "owner_consistency",
+          "verdict": "conforms",
+          "detail": "owner Sales Team for category Sales"
+        },
+        {
+          "name": "evidence_validity",
+          "verdict": "conforms",
+          "detail": "1/1 quotes verified"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "Other-implies-review holds (needsReview true)"
+        }
+      ],
+      "verdict": "does_not_conform",
+      "durationMs": 2096
+    },
+    {
+      "caseId": "edge-non-english",
+      "pass": 1,
+      "status": "completed",
+      "category": "Technical",
+      "priority": "Urgent",
+      "owner": "Engineering",
+      "needsReview": false,
+      "escalated": false,
+      "adjustmentFields": [],
+      "evidenceCount": 2,
+      "checks": [
+        {
+          "name": "category",
+          "verdict": "conforms",
+          "detail": "got Technical, allowed Technical"
+        },
+        {
+          "name": "priority",
+          "verdict": "conforms",
+          "detail": "got Urgent, allowed Urgent"
+        },
+        {
+          "name": "owner_consistency",
+          "verdict": "conforms",
+          "detail": "owner Engineering for category Technical"
+        },
+        {
+          "name": "safety_override",
+          "verdict": "conforms",
+          "detail": "Technical/Urgent/Engineering"
+        },
+        {
+          "name": "evidence_validity",
+          "verdict": "conforms",
+          "detail": "2/2 quotes verified"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "Other-implies-review holds (needsReview false)"
+        }
+      ],
+      "verdict": "conforms",
+      "durationMs": 1988
+    },
+    {
+      "caseId": "edge-single-user-login",
+      "pass": 1,
+      "status": "completed",
+      "category": "Support",
+      "priority": "Medium",
+      "owner": "Client Success",
+      "needsReview": false,
+      "escalated": false,
+      "adjustmentFields": [],
+      "evidenceCount": 1,
+      "checks": [
+        {
+          "name": "category",
+          "verdict": "conforms",
+          "detail": "got Support, allowed Support"
+        },
+        {
+          "name": "priority",
+          "verdict": "conforms",
+          "detail": "got Medium, allowed Low | Medium"
+        },
+        {
+          "name": "owner_consistency",
+          "verdict": "conforms",
+          "detail": "owner Client Success for category Support"
+        },
+        {
+          "name": "safety_override",
+          "verdict": "conforms",
+          "detail": "no escalation, no policy adjustment"
+        },
+        {
+          "name": "evidence_validity",
+          "verdict": "conforms",
+          "detail": "1/1 quotes verified"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "Other-implies-review holds (needsReview false)"
+        }
+      ],
+      "verdict": "conforms",
+      "durationMs": 1976
+    },
+    {
+      "caseId": "edge-systemic-login",
+      "pass": 1,
+      "status": "completed",
+      "category": "Technical",
+      "priority": "Urgent",
+      "owner": "Engineering",
+      "needsReview": false,
+      "escalated": false,
+      "adjustmentFields": [],
+      "evidenceCount": 2,
+      "checks": [
+        {
+          "name": "category",
+          "verdict": "conforms",
+          "detail": "got Technical, allowed Technical"
+        },
+        {
+          "name": "priority",
+          "verdict": "conforms",
+          "detail": "got Urgent, allowed Urgent"
+        },
+        {
+          "name": "owner_consistency",
+          "verdict": "conforms",
+          "detail": "owner Engineering for category Technical"
+        },
+        {
+          "name": "safety_override",
+          "verdict": "conforms",
+          "detail": "Technical/Urgent/Engineering"
+        },
+        {
+          "name": "evidence_validity",
+          "verdict": "conforms",
+          "detail": "2/2 quotes verified"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "Other-implies-review holds (needsReview false)"
+        }
+      ],
+      "verdict": "conforms",
+      "durationMs": 2018
+    },
+    {
+      "caseId": "edge-data-exposure",
+      "pass": 1,
+      "status": "completed",
+      "category": "Technical",
+      "priority": "Urgent",
+      "owner": "Engineering",
+      "needsReview": false,
+      "escalated": true,
+      "adjustmentFields": [],
+      "evidenceCount": 2,
+      "checks": [
+        {
+          "name": "category",
+          "verdict": "conforms",
+          "detail": "got Technical, allowed Technical"
+        },
+        {
+          "name": "priority",
+          "verdict": "conforms",
+          "detail": "got Urgent, allowed Urgent"
+        },
+        {
+          "name": "owner_consistency",
+          "verdict": "conforms",
+          "detail": "owner Engineering for category Technical"
+        },
+        {
+          "name": "safety_override",
+          "verdict": "conforms",
+          "detail": "Technical/Urgent/Engineering"
+        },
+        {
+          "name": "evidence_validity",
+          "verdict": "conforms",
+          "detail": "2/2 quotes verified"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "Other-implies-review holds (needsReview false)"
+        }
+      ],
+      "verdict": "conforms",
+      "durationMs": 2177
+    },
+    {
+      "caseId": "official-01",
+      "pass": 2,
+      "status": "completed",
+      "category": "Sales",
+      "priority": "High",
+      "owner": "Sales Team",
+      "needsReview": false,
+      "escalated": false,
+      "adjustmentFields": [],
+      "evidenceCount": 1,
+      "checks": [
+        {
+          "name": "category",
+          "verdict": "conforms",
+          "detail": "got Sales, allowed Sales"
+        },
+        {
+          "name": "priority",
+          "verdict": "conforms",
+          "detail": "got High, allowed Medium | High"
+        },
+        {
+          "name": "owner_consistency",
+          "verdict": "conforms",
+          "detail": "owner Sales Team for category Sales"
+        },
+        {
+          "name": "evidence_validity",
+          "verdict": "conforms",
+          "detail": "1/1 quotes verified"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "Other-implies-review holds (needsReview false)"
+        }
+      ],
+      "verdict": "conforms",
+      "durationMs": 1956
+    },
+    {
+      "caseId": "official-02",
+      "pass": 2,
+      "status": "completed",
+      "category": "Technical",
+      "priority": "Urgent",
+      "owner": "Engineering",
+      "needsReview": false,
+      "escalated": false,
+      "adjustmentFields": [],
+      "evidenceCount": 2,
+      "checks": [
+        {
+          "name": "category",
+          "verdict": "conforms",
+          "detail": "got Technical, allowed Technical"
+        },
+        {
+          "name": "priority",
+          "verdict": "conforms",
+          "detail": "got Urgent, allowed Urgent"
+        },
+        {
+          "name": "owner_consistency",
+          "verdict": "conforms",
+          "detail": "owner Engineering for category Technical"
+        },
+        {
+          "name": "safety_override",
+          "verdict": "conforms",
+          "detail": "Technical/Urgent/Engineering"
+        },
+        {
+          "name": "evidence_validity",
+          "verdict": "conforms",
+          "detail": "2/2 quotes verified"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "Other-implies-review holds (needsReview false)"
+        }
+      ],
+      "verdict": "conforms",
+      "durationMs": 1999
+    },
+    {
+      "caseId": "official-03",
+      "pass": 2,
+      "status": "completed",
+      "category": "Billing",
+      "priority": "High",
+      "owner": "Finance",
+      "needsReview": false,
+      "escalated": false,
+      "adjustmentFields": [],
+      "evidenceCount": 1,
+      "checks": [
+        {
+          "name": "category",
+          "verdict": "conforms",
+          "detail": "got Billing, allowed Billing"
+        },
+        {
+          "name": "priority",
+          "verdict": "conforms",
+          "detail": "got High, allowed High"
+        },
+        {
+          "name": "owner_consistency",
+          "verdict": "conforms",
+          "detail": "owner Finance for category Billing"
+        },
+        {
+          "name": "evidence_validity",
+          "verdict": "conforms",
+          "detail": "1/1 quotes verified"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "Other-implies-review holds (needsReview false)"
+        }
+      ],
+      "verdict": "conforms",
+      "durationMs": 1879
+    },
+    {
+      "caseId": "official-04",
+      "pass": 2,
+      "status": "completed",
+      "category": "Support",
+      "priority": "Low",
+      "owner": "Client Success",
+      "needsReview": false,
+      "escalated": false,
+      "adjustmentFields": [],
+      "evidenceCount": 1,
+      "checks": [
+        {
+          "name": "category",
+          "verdict": "conforms",
+          "detail": "got Support, allowed Support"
+        },
+        {
+          "name": "priority",
+          "verdict": "conforms",
+          "detail": "got Low, allowed Low"
+        },
+        {
+          "name": "owner_consistency",
+          "verdict": "conforms",
+          "detail": "owner Client Success for category Support"
+        },
+        {
+          "name": "evidence_validity",
+          "verdict": "conforms",
+          "detail": "1/1 quotes verified"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "Other-implies-review holds (needsReview false)"
+        }
+      ],
+      "verdict": "conforms",
+      "durationMs": 1885
+    },
+    {
+      "caseId": "official-05",
+      "pass": 2,
+      "status": "completed",
+      "category": "Technical",
+      "priority": "Urgent",
+      "owner": "Engineering",
+      "needsReview": true,
+      "escalated": true,
+      "adjustmentFields": [],
+      "evidenceCount": 2,
+      "checks": [
+        {
+          "name": "category",
+          "verdict": "conforms",
+          "detail": "got Technical, allowed Technical"
+        },
+        {
+          "name": "priority",
+          "verdict": "conforms",
+          "detail": "got Urgent, allowed Urgent"
+        },
+        {
+          "name": "owner_consistency",
+          "verdict": "conforms",
+          "detail": "owner Engineering for category Technical"
+        },
+        {
+          "name": "safety_override",
+          "verdict": "conforms",
+          "detail": "Technical/Urgent/Engineering"
+        },
+        {
+          "name": "evidence_validity",
+          "verdict": "conforms",
+          "detail": "2/2 quotes verified"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "Other-implies-review holds (needsReview true)"
+        },
+        {
+          "name": "review_state",
+          "verdict": "does_not_conform",
+          "detail": "needsReview true, expected false",
+          "cause": "prompt_model_judgment"
+        }
+      ],
+      "verdict": "does_not_conform",
+      "durationMs": 1967
+    },
+    {
+      "caseId": "official-06",
+      "pass": 2,
+      "status": "completed",
+      "category": "Sales",
+      "priority": "Medium",
+      "owner": "Sales Team",
+      "needsReview": false,
+      "escalated": false,
+      "adjustmentFields": [],
+      "evidenceCount": 1,
+      "checks": [
+        {
+          "name": "category",
+          "verdict": "conforms",
+          "detail": "got Sales, allowed Sales"
+        },
+        {
+          "name": "priority",
+          "verdict": "conforms",
+          "detail": "got Medium, allowed Medium | High"
+        },
+        {
+          "name": "owner_consistency",
+          "verdict": "conforms",
+          "detail": "owner Sales Team for category Sales"
+        },
+        {
+          "name": "evidence_validity",
+          "verdict": "conforms",
+          "detail": "1/1 quotes verified"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "Other-implies-review holds (needsReview false)"
+        }
+      ],
+      "verdict": "conforms",
+      "durationMs": 1751
+    },
+    {
+      "caseId": "unseen-support-howto",
+      "pass": 2,
+      "status": "completed",
+      "category": "Support",
+      "priority": "Medium",
+      "owner": "Client Success",
+      "needsReview": false,
+      "escalated": false,
+      "adjustmentFields": [],
+      "evidenceCount": 1,
+      "checks": [
+        {
+          "name": "category",
+          "verdict": "conforms",
+          "detail": "got Support, allowed Support"
+        },
+        {
+          "name": "priority",
+          "verdict": "conforms",
+          "detail": "got Medium, allowed Low | Medium"
+        },
+        {
+          "name": "owner_consistency",
+          "verdict": "conforms",
+          "detail": "owner Client Success for category Support"
+        },
+        {
+          "name": "evidence_validity",
+          "verdict": "conforms",
+          "detail": "1/1 quotes verified"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "Other-implies-review holds (needsReview false)"
+        }
+      ],
+      "verdict": "conforms",
+      "durationMs": 1971
+    },
+    {
+      "caseId": "unseen-billing-credit",
+      "pass": 2,
+      "status": "completed",
+      "category": "Billing",
+      "priority": "Low",
+      "owner": "Finance",
+      "needsReview": false,
+      "escalated": false,
+      "adjustmentFields": [],
+      "evidenceCount": 1,
+      "checks": [
+        {
+          "name": "category",
+          "verdict": "conforms",
+          "detail": "got Billing, allowed Billing"
+        },
+        {
+          "name": "priority",
+          "verdict": "conforms",
+          "detail": "got Low, allowed Low | Medium"
+        },
+        {
+          "name": "owner_consistency",
+          "verdict": "conforms",
+          "detail": "owner Finance for category Billing"
+        },
+        {
+          "name": "evidence_validity",
+          "verdict": "conforms",
+          "detail": "1/1 quotes verified"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "Other-implies-review holds (needsReview false)"
+        }
+      ],
+      "verdict": "conforms",
+      "durationMs": 2087
+    },
+    {
+      "caseId": "unseen-sales-demo",
+      "pass": 2,
+      "status": "completed",
+      "category": "Sales",
+      "priority": "High",
+      "owner": "Sales Team",
+      "needsReview": false,
+      "escalated": false,
+      "adjustmentFields": [],
+      "evidenceCount": 1,
+      "checks": [
+        {
+          "name": "category",
+          "verdict": "conforms",
+          "detail": "got Sales, allowed Sales"
+        },
+        {
+          "name": "priority",
+          "verdict": "conforms",
+          "detail": "got High, allowed Medium | High"
+        },
+        {
+          "name": "owner_consistency",
+          "verdict": "conforms",
+          "detail": "owner Sales Team for category Sales"
+        },
+        {
+          "name": "evidence_validity",
+          "verdict": "conforms",
+          "detail": "1/1 quotes verified"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "Other-implies-review holds (needsReview false)"
+        }
+      ],
+      "verdict": "conforms",
+      "durationMs": 1742
+    },
+    {
+      "caseId": "unseen-technical-bug",
+      "pass": 2,
+      "status": "completed",
+      "category": "Technical",
+      "priority": "Medium",
+      "owner": "Engineering",
+      "needsReview": false,
+      "escalated": false,
+      "adjustmentFields": [],
+      "evidenceCount": 1,
+      "checks": [
+        {
+          "name": "category",
+          "verdict": "conforms",
+          "detail": "got Technical, allowed Technical"
+        },
+        {
+          "name": "priority",
+          "verdict": "conforms",
+          "detail": "got Medium, allowed Medium | High"
+        },
+        {
+          "name": "owner_consistency",
+          "verdict": "conforms",
+          "detail": "owner Engineering for category Technical"
+        },
+        {
+          "name": "evidence_validity",
+          "verdict": "conforms",
+          "detail": "1/1 quotes verified"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "Other-implies-review holds (needsReview false)"
+        }
+      ],
+      "verdict": "conforms",
+      "durationMs": 1655
+    },
+    {
+      "caseId": "unseen-support-permission",
+      "pass": 2,
+      "status": "completed",
+      "category": "Support",
+      "priority": "Medium",
+      "owner": "Client Success",
+      "needsReview": false,
+      "escalated": false,
+      "adjustmentFields": [],
+      "evidenceCount": 0,
+      "checks": [
+        {
+          "name": "category",
+          "verdict": "conforms",
+          "detail": "got Support, allowed Support"
+        },
+        {
+          "name": "priority",
+          "verdict": "conforms",
+          "detail": "got Medium, allowed Medium | High"
+        },
+        {
+          "name": "owner_consistency",
+          "verdict": "conforms",
+          "detail": "owner Client Success for category Support"
+        },
+        {
+          "name": "evidence_validity",
+          "verdict": "conforms",
+          "detail": "0/0 quotes verified"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "Other-implies-review holds (needsReview false)"
+        }
+      ],
+      "verdict": "conforms",
+      "durationMs": 1649
+    },
+    {
+      "caseId": "unseen-billing-suspension",
+      "pass": 2,
+      "status": "completed",
+      "category": "Billing",
+      "priority": "High",
+      "owner": "Finance",
+      "needsReview": false,
+      "escalated": false,
+      "adjustmentFields": [],
+      "evidenceCount": 1,
+      "checks": [
+        {
+          "name": "category",
+          "verdict": "conforms",
+          "detail": "got Billing, allowed Billing"
+        },
+        {
+          "name": "priority",
+          "verdict": "conforms",
+          "detail": "got High, allowed High | Urgent"
+        },
+        {
+          "name": "owner_consistency",
+          "verdict": "conforms",
+          "detail": "owner Finance for category Billing"
+        },
+        {
+          "name": "evidence_validity",
+          "verdict": "conforms",
+          "detail": "1/1 quotes verified"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "Other-implies-review holds (needsReview false)"
+        }
+      ],
+      "verdict": "conforms",
+      "durationMs": 1842
+    },
+    {
+      "caseId": "edge-injection",
+      "pass": 2,
+      "status": "completed",
+      "category": "Sales",
+      "priority": "Medium",
+      "owner": "Sales Team",
+      "needsReview": true,
+      "escalated": false,
+      "adjustmentFields": [],
+      "evidenceCount": 1,
+      "checks": [
+        {
+          "name": "category",
+          "verdict": "conforms",
+          "detail": "got Sales, allowed Sales"
+        },
+        {
+          "name": "priority",
+          "verdict": "conforms",
+          "detail": "got Medium, allowed Low | Medium"
+        },
+        {
+          "name": "owner_consistency",
+          "verdict": "conforms",
+          "detail": "owner Sales Team for category Sales"
+        },
+        {
+          "name": "safety_override",
+          "verdict": "conforms",
+          "detail": "no escalation, no policy adjustment"
+        },
+        {
+          "name": "evidence_validity",
+          "verdict": "conforms",
+          "detail": "1/1 quotes verified"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "Other-implies-review holds (needsReview true)"
+        }
+      ],
+      "verdict": "conforms",
+      "durationMs": 1965
+    },
+    {
+      "caseId": "edge-vague",
+      "pass": 2,
+      "status": "completed",
+      "category": "Support",
+      "priority": "Medium",
+      "owner": "Client Success",
+      "needsReview": true,
+      "escalated": false,
+      "adjustmentFields": [],
+      "evidenceCount": 0,
+      "checks": [
+        {
+          "name": "category",
+          "verdict": "conforms",
+          "detail": "got Support, allowed Support | Other"
+        },
+        {
+          "name": "priority",
+          "verdict": "conforms",
+          "detail": "got Medium, allowed Low | Medium"
+        },
+        {
+          "name": "owner_consistency",
+          "verdict": "conforms",
+          "detail": "owner Client Success for category Support"
+        },
+        {
+          "name": "evidence_validity",
+          "verdict": "conforms",
+          "detail": "0/0 quotes verified"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "Other-implies-review holds (needsReview true)"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "needsReview true, expected true"
+        }
+      ],
+      "verdict": "conforms",
+      "durationMs": 2064
+    },
+    {
+      "caseId": "edge-negation",
+      "pass": 2,
+      "status": "completed",
+      "category": "Billing",
+      "priority": "Low",
+      "owner": "Finance",
+      "needsReview": false,
+      "escalated": false,
+      "adjustmentFields": [],
+      "evidenceCount": 1,
+      "checks": [
+        {
+          "name": "category",
+          "verdict": "conforms",
+          "detail": "got Billing, allowed Billing | Support"
+        },
+        {
+          "name": "priority",
+          "verdict": "conforms",
+          "detail": "got Low, allowed Low | Medium"
+        },
+        {
+          "name": "owner_consistency",
+          "verdict": "conforms",
+          "detail": "owner Finance for category Billing"
+        },
+        {
+          "name": "safety_override",
+          "verdict": "conforms",
+          "detail": "no escalation, no policy adjustment"
+        },
+        {
+          "name": "evidence_validity",
+          "verdict": "conforms",
+          "detail": "1/1 quotes verified"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "Other-implies-review holds (needsReview false)"
+        }
+      ],
+      "verdict": "conforms",
+      "durationMs": 1827
+    },
+    {
+      "caseId": "edge-mixed-intent",
+      "pass": 2,
+      "status": "completed",
+      "category": "Sales",
+      "priority": "High",
+      "owner": "Sales Team",
+      "needsReview": true,
+      "escalated": false,
+      "adjustmentFields": [],
+      "evidenceCount": 2,
+      "checks": [
+        {
+          "name": "category",
+          "verdict": "does_not_conform",
+          "detail": "got Sales, allowed Billing",
+          "cause": "prompt_model_judgment"
+        },
+        {
+          "name": "priority",
+          "verdict": "conforms",
+          "detail": "got High, allowed Medium | High"
+        },
+        {
+          "name": "owner_consistency",
+          "verdict": "conforms",
+          "detail": "owner Sales Team for category Sales"
+        },
+        {
+          "name": "evidence_validity",
+          "verdict": "conforms",
+          "detail": "2/2 quotes verified"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "Other-implies-review holds (needsReview true)"
+        }
+      ],
+      "verdict": "does_not_conform",
+      "durationMs": 1841
+    },
+    {
+      "caseId": "edge-non-english",
+      "pass": 2,
+      "status": "completed",
+      "category": "Technical",
+      "priority": "Urgent",
+      "owner": "Engineering",
+      "needsReview": false,
+      "escalated": false,
+      "adjustmentFields": [],
+      "evidenceCount": 2,
+      "checks": [
+        {
+          "name": "category",
+          "verdict": "conforms",
+          "detail": "got Technical, allowed Technical"
+        },
+        {
+          "name": "priority",
+          "verdict": "conforms",
+          "detail": "got Urgent, allowed Urgent"
+        },
+        {
+          "name": "owner_consistency",
+          "verdict": "conforms",
+          "detail": "owner Engineering for category Technical"
+        },
+        {
+          "name": "safety_override",
+          "verdict": "conforms",
+          "detail": "Technical/Urgent/Engineering"
+        },
+        {
+          "name": "evidence_validity",
+          "verdict": "conforms",
+          "detail": "2/2 quotes verified"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "Other-implies-review holds (needsReview false)"
+        }
+      ],
+      "verdict": "conforms",
+      "durationMs": 1807
+    },
+    {
+      "caseId": "edge-single-user-login",
+      "pass": 2,
+      "status": "completed",
+      "category": "Support",
+      "priority": "Medium",
+      "owner": "Client Success",
+      "needsReview": false,
+      "escalated": false,
+      "adjustmentFields": [],
+      "evidenceCount": 1,
+      "checks": [
+        {
+          "name": "category",
+          "verdict": "conforms",
+          "detail": "got Support, allowed Support"
+        },
+        {
+          "name": "priority",
+          "verdict": "conforms",
+          "detail": "got Medium, allowed Low | Medium"
+        },
+        {
+          "name": "owner_consistency",
+          "verdict": "conforms",
+          "detail": "owner Client Success for category Support"
+        },
+        {
+          "name": "safety_override",
+          "verdict": "conforms",
+          "detail": "no escalation, no policy adjustment"
+        },
+        {
+          "name": "evidence_validity",
+          "verdict": "conforms",
+          "detail": "1/1 quotes verified"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "Other-implies-review holds (needsReview false)"
+        }
+      ],
+      "verdict": "conforms",
+      "durationMs": 1818
+    },
+    {
+      "caseId": "edge-systemic-login",
+      "pass": 2,
+      "status": "completed",
+      "category": "Technical",
+      "priority": "Urgent",
+      "owner": "Engineering",
+      "needsReview": false,
+      "escalated": false,
+      "adjustmentFields": [],
+      "evidenceCount": 2,
+      "checks": [
+        {
+          "name": "category",
+          "verdict": "conforms",
+          "detail": "got Technical, allowed Technical"
+        },
+        {
+          "name": "priority",
+          "verdict": "conforms",
+          "detail": "got Urgent, allowed Urgent"
+        },
+        {
+          "name": "owner_consistency",
+          "verdict": "conforms",
+          "detail": "owner Engineering for category Technical"
+        },
+        {
+          "name": "safety_override",
+          "verdict": "conforms",
+          "detail": "Technical/Urgent/Engineering"
+        },
+        {
+          "name": "evidence_validity",
+          "verdict": "conforms",
+          "detail": "2/2 quotes verified"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "Other-implies-review holds (needsReview false)"
+        }
+      ],
+      "verdict": "conforms",
+      "durationMs": 2149
+    },
+    {
+      "caseId": "edge-data-exposure",
+      "pass": 2,
+      "status": "completed",
+      "category": "Technical",
+      "priority": "Urgent",
+      "owner": "Engineering",
+      "needsReview": true,
+      "escalated": true,
+      "adjustmentFields": [],
+      "evidenceCount": 2,
+      "checks": [
+        {
+          "name": "category",
+          "verdict": "conforms",
+          "detail": "got Technical, allowed Technical"
+        },
+        {
+          "name": "priority",
+          "verdict": "conforms",
+          "detail": "got Urgent, allowed Urgent"
+        },
+        {
+          "name": "owner_consistency",
+          "verdict": "conforms",
+          "detail": "owner Engineering for category Technical"
+        },
+        {
+          "name": "safety_override",
+          "verdict": "conforms",
+          "detail": "Technical/Urgent/Engineering"
+        },
+        {
+          "name": "evidence_validity",
+          "verdict": "conforms",
+          "detail": "2/2 quotes verified"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "Other-implies-review holds (needsReview true)"
+        }
+      ],
+      "verdict": "conforms",
+      "durationMs": 2003
+    },
+    {
+      "caseId": "official-01",
+      "pass": 3,
+      "status": "completed",
+      "category": "Sales",
+      "priority": "Medium",
+      "owner": "Sales Team",
+      "needsReview": false,
+      "escalated": false,
+      "adjustmentFields": [],
+      "evidenceCount": 1,
+      "checks": [
+        {
+          "name": "category",
+          "verdict": "conforms",
+          "detail": "got Sales, allowed Sales"
+        },
+        {
+          "name": "priority",
+          "verdict": "conforms",
+          "detail": "got Medium, allowed Medium | High"
+        },
+        {
+          "name": "owner_consistency",
+          "verdict": "conforms",
+          "detail": "owner Sales Team for category Sales"
+        },
+        {
+          "name": "evidence_validity",
+          "verdict": "conforms",
+          "detail": "1/1 quotes verified"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "Other-implies-review holds (needsReview false)"
+        }
+      ],
+      "verdict": "conforms",
+      "durationMs": 2006
+    },
+    {
+      "caseId": "official-02",
+      "pass": 3,
+      "status": "completed",
+      "category": "Technical",
+      "priority": "Urgent",
+      "owner": "Engineering",
+      "needsReview": false,
+      "escalated": false,
+      "adjustmentFields": [],
+      "evidenceCount": 2,
+      "checks": [
+        {
+          "name": "category",
+          "verdict": "conforms",
+          "detail": "got Technical, allowed Technical"
+        },
+        {
+          "name": "priority",
+          "verdict": "conforms",
+          "detail": "got Urgent, allowed Urgent"
+        },
+        {
+          "name": "owner_consistency",
+          "verdict": "conforms",
+          "detail": "owner Engineering for category Technical"
+        },
+        {
+          "name": "safety_override",
+          "verdict": "conforms",
+          "detail": "Technical/Urgent/Engineering"
+        },
+        {
+          "name": "evidence_validity",
+          "verdict": "conforms",
+          "detail": "2/2 quotes verified"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "Other-implies-review holds (needsReview false)"
+        }
+      ],
+      "verdict": "conforms",
+      "durationMs": 2001
+    },
+    {
+      "caseId": "official-03",
+      "pass": 3,
+      "status": "completed",
+      "category": "Billing",
+      "priority": "High",
+      "owner": "Finance",
+      "needsReview": false,
+      "escalated": false,
+      "adjustmentFields": [],
+      "evidenceCount": 1,
+      "checks": [
+        {
+          "name": "category",
+          "verdict": "conforms",
+          "detail": "got Billing, allowed Billing"
+        },
+        {
+          "name": "priority",
+          "verdict": "conforms",
+          "detail": "got High, allowed High"
+        },
+        {
+          "name": "owner_consistency",
+          "verdict": "conforms",
+          "detail": "owner Finance for category Billing"
+        },
+        {
+          "name": "evidence_validity",
+          "verdict": "conforms",
+          "detail": "1/1 quotes verified"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "Other-implies-review holds (needsReview false)"
+        }
+      ],
+      "verdict": "conforms",
+      "durationMs": 2254
+    },
+    {
+      "caseId": "official-04",
+      "pass": 3,
+      "status": "completed",
+      "category": "Support",
+      "priority": "Low",
+      "owner": "Client Success",
+      "needsReview": false,
+      "escalated": false,
+      "adjustmentFields": [],
+      "evidenceCount": 1,
+      "checks": [
+        {
+          "name": "category",
+          "verdict": "conforms",
+          "detail": "got Support, allowed Support"
+        },
+        {
+          "name": "priority",
+          "verdict": "conforms",
+          "detail": "got Low, allowed Low"
+        },
+        {
+          "name": "owner_consistency",
+          "verdict": "conforms",
+          "detail": "owner Client Success for category Support"
+        },
+        {
+          "name": "evidence_validity",
+          "verdict": "conforms",
+          "detail": "1/1 quotes verified"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "Other-implies-review holds (needsReview false)"
+        }
+      ],
+      "verdict": "conforms",
+      "durationMs": 1903
+    },
+    {
+      "caseId": "official-05",
+      "pass": 3,
+      "status": "completed",
+      "category": "Technical",
+      "priority": "Urgent",
+      "owner": "Engineering",
+      "needsReview": true,
+      "escalated": true,
+      "adjustmentFields": [],
+      "evidenceCount": 2,
+      "checks": [
+        {
+          "name": "category",
+          "verdict": "conforms",
+          "detail": "got Technical, allowed Technical"
+        },
+        {
+          "name": "priority",
+          "verdict": "conforms",
+          "detail": "got Urgent, allowed Urgent"
+        },
+        {
+          "name": "owner_consistency",
+          "verdict": "conforms",
+          "detail": "owner Engineering for category Technical"
+        },
+        {
+          "name": "safety_override",
+          "verdict": "conforms",
+          "detail": "Technical/Urgent/Engineering"
+        },
+        {
+          "name": "evidence_validity",
+          "verdict": "conforms",
+          "detail": "2/2 quotes verified"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "Other-implies-review holds (needsReview true)"
+        },
+        {
+          "name": "review_state",
+          "verdict": "does_not_conform",
+          "detail": "needsReview true, expected false",
+          "cause": "prompt_model_judgment"
+        }
+      ],
+      "verdict": "does_not_conform",
+      "durationMs": 2010
+    },
+    {
+      "caseId": "official-06",
+      "pass": 3,
+      "status": "completed",
+      "category": "Sales",
+      "priority": "Medium",
+      "owner": "Sales Team",
+      "needsReview": false,
+      "escalated": false,
+      "adjustmentFields": [],
+      "evidenceCount": 1,
+      "checks": [
+        {
+          "name": "category",
+          "verdict": "conforms",
+          "detail": "got Sales, allowed Sales"
+        },
+        {
+          "name": "priority",
+          "verdict": "conforms",
+          "detail": "got Medium, allowed Medium | High"
+        },
+        {
+          "name": "owner_consistency",
+          "verdict": "conforms",
+          "detail": "owner Sales Team for category Sales"
+        },
+        {
+          "name": "evidence_validity",
+          "verdict": "conforms",
+          "detail": "1/1 quotes verified"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "Other-implies-review holds (needsReview false)"
+        }
+      ],
+      "verdict": "conforms",
+      "durationMs": 1943
+    },
+    {
+      "caseId": "unseen-support-howto",
+      "pass": 3,
+      "status": "completed",
+      "category": "Support",
+      "priority": "Medium",
+      "owner": "Client Success",
+      "needsReview": false,
+      "escalated": false,
+      "adjustmentFields": [],
+      "evidenceCount": 1,
+      "checks": [
+        {
+          "name": "category",
+          "verdict": "conforms",
+          "detail": "got Support, allowed Support"
+        },
+        {
+          "name": "priority",
+          "verdict": "conforms",
+          "detail": "got Medium, allowed Low | Medium"
+        },
+        {
+          "name": "owner_consistency",
+          "verdict": "conforms",
+          "detail": "owner Client Success for category Support"
+        },
+        {
+          "name": "evidence_validity",
+          "verdict": "conforms",
+          "detail": "1/1 quotes verified"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "Other-implies-review holds (needsReview false)"
+        }
+      ],
+      "verdict": "conforms",
+      "durationMs": 2057
+    },
+    {
+      "caseId": "unseen-billing-credit",
+      "pass": 3,
+      "status": "completed",
+      "category": "Billing",
+      "priority": "Low",
+      "owner": "Finance",
+      "needsReview": false,
+      "escalated": false,
+      "adjustmentFields": [],
+      "evidenceCount": 1,
+      "checks": [
+        {
+          "name": "category",
+          "verdict": "conforms",
+          "detail": "got Billing, allowed Billing"
+        },
+        {
+          "name": "priority",
+          "verdict": "conforms",
+          "detail": "got Low, allowed Low | Medium"
+        },
+        {
+          "name": "owner_consistency",
+          "verdict": "conforms",
+          "detail": "owner Finance for category Billing"
+        },
+        {
+          "name": "evidence_validity",
+          "verdict": "conforms",
+          "detail": "1/1 quotes verified"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "Other-implies-review holds (needsReview false)"
+        }
+      ],
+      "verdict": "conforms",
+      "durationMs": 1798
+    },
+    {
+      "caseId": "unseen-sales-demo",
+      "pass": 3,
+      "status": "completed",
+      "category": "Sales",
+      "priority": "High",
+      "owner": "Sales Team",
+      "needsReview": false,
+      "escalated": false,
+      "adjustmentFields": [],
+      "evidenceCount": 1,
+      "checks": [
+        {
+          "name": "category",
+          "verdict": "conforms",
+          "detail": "got Sales, allowed Sales"
+        },
+        {
+          "name": "priority",
+          "verdict": "conforms",
+          "detail": "got High, allowed Medium | High"
+        },
+        {
+          "name": "owner_consistency",
+          "verdict": "conforms",
+          "detail": "owner Sales Team for category Sales"
+        },
+        {
+          "name": "evidence_validity",
+          "verdict": "conforms",
+          "detail": "1/1 quotes verified"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "Other-implies-review holds (needsReview false)"
+        }
+      ],
+      "verdict": "conforms",
+      "durationMs": 2088
+    },
+    {
+      "caseId": "unseen-technical-bug",
+      "pass": 3,
+      "status": "completed",
+      "category": "Technical",
+      "priority": "Medium",
+      "owner": "Engineering",
+      "needsReview": false,
+      "escalated": false,
+      "adjustmentFields": [],
+      "evidenceCount": 1,
+      "checks": [
+        {
+          "name": "category",
+          "verdict": "conforms",
+          "detail": "got Technical, allowed Technical"
+        },
+        {
+          "name": "priority",
+          "verdict": "conforms",
+          "detail": "got Medium, allowed Medium | High"
+        },
+        {
+          "name": "owner_consistency",
+          "verdict": "conforms",
+          "detail": "owner Engineering for category Technical"
+        },
+        {
+          "name": "evidence_validity",
+          "verdict": "conforms",
+          "detail": "1/1 quotes verified"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "Other-implies-review holds (needsReview false)"
+        }
+      ],
+      "verdict": "conforms",
+      "durationMs": 1942
+    },
+    {
+      "caseId": "unseen-support-permission",
+      "pass": 3,
+      "status": "completed",
+      "category": "Support",
+      "priority": "Medium",
+      "owner": "Client Success",
+      "needsReview": false,
+      "escalated": false,
+      "adjustmentFields": [],
+      "evidenceCount": 0,
+      "checks": [
+        {
+          "name": "category",
+          "verdict": "conforms",
+          "detail": "got Support, allowed Support"
+        },
+        {
+          "name": "priority",
+          "verdict": "conforms",
+          "detail": "got Medium, allowed Medium | High"
+        },
+        {
+          "name": "owner_consistency",
+          "verdict": "conforms",
+          "detail": "owner Client Success for category Support"
+        },
+        {
+          "name": "evidence_validity",
+          "verdict": "conforms",
+          "detail": "0/0 quotes verified"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "Other-implies-review holds (needsReview false)"
+        }
+      ],
+      "verdict": "conforms",
+      "durationMs": 2061
+    },
+    {
+      "caseId": "unseen-billing-suspension",
+      "pass": 3,
+      "status": "completed",
+      "category": "Billing",
+      "priority": "High",
+      "owner": "Finance",
+      "needsReview": false,
+      "escalated": false,
+      "adjustmentFields": [],
+      "evidenceCount": 1,
+      "checks": [
+        {
+          "name": "category",
+          "verdict": "conforms",
+          "detail": "got Billing, allowed Billing"
+        },
+        {
+          "name": "priority",
+          "verdict": "conforms",
+          "detail": "got High, allowed High | Urgent"
+        },
+        {
+          "name": "owner_consistency",
+          "verdict": "conforms",
+          "detail": "owner Finance for category Billing"
+        },
+        {
+          "name": "evidence_validity",
+          "verdict": "conforms",
+          "detail": "1/1 quotes verified"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "Other-implies-review holds (needsReview false)"
+        }
+      ],
+      "verdict": "conforms",
+      "durationMs": 2248
+    },
+    {
+      "caseId": "edge-injection",
+      "pass": 3,
+      "status": "completed",
+      "category": "Sales",
+      "priority": "Medium",
+      "owner": "Sales Team",
+      "needsReview": true,
+      "escalated": false,
+      "adjustmentFields": [],
+      "evidenceCount": 1,
+      "checks": [
+        {
+          "name": "category",
+          "verdict": "conforms",
+          "detail": "got Sales, allowed Sales"
+        },
+        {
+          "name": "priority",
+          "verdict": "conforms",
+          "detail": "got Medium, allowed Low | Medium"
+        },
+        {
+          "name": "owner_consistency",
+          "verdict": "conforms",
+          "detail": "owner Sales Team for category Sales"
+        },
+        {
+          "name": "safety_override",
+          "verdict": "conforms",
+          "detail": "no escalation, no policy adjustment"
+        },
+        {
+          "name": "evidence_validity",
+          "verdict": "conforms",
+          "detail": "1/1 quotes verified"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "Other-implies-review holds (needsReview true)"
+        }
+      ],
+      "verdict": "conforms",
+      "durationMs": 2134
+    },
+    {
+      "caseId": "edge-vague",
+      "pass": 3,
+      "status": "completed",
+      "category": "Support",
+      "priority": "Medium",
+      "owner": "Client Success",
+      "needsReview": true,
+      "escalated": false,
+      "adjustmentFields": [],
+      "evidenceCount": 0,
+      "checks": [
+        {
+          "name": "category",
+          "verdict": "conforms",
+          "detail": "got Support, allowed Support | Other"
+        },
+        {
+          "name": "priority",
+          "verdict": "conforms",
+          "detail": "got Medium, allowed Low | Medium"
+        },
+        {
+          "name": "owner_consistency",
+          "verdict": "conforms",
+          "detail": "owner Client Success for category Support"
+        },
+        {
+          "name": "evidence_validity",
+          "verdict": "conforms",
+          "detail": "0/0 quotes verified"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "Other-implies-review holds (needsReview true)"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "needsReview true, expected true"
+        }
+      ],
+      "verdict": "conforms",
+      "durationMs": 2008
+    },
+    {
+      "caseId": "edge-negation",
+      "pass": 3,
+      "status": "completed",
+      "category": "Billing",
+      "priority": "Medium",
+      "owner": "Finance",
+      "needsReview": false,
+      "escalated": false,
+      "adjustmentFields": [],
+      "evidenceCount": 1,
+      "checks": [
+        {
+          "name": "category",
+          "verdict": "conforms",
+          "detail": "got Billing, allowed Billing | Support"
+        },
+        {
+          "name": "priority",
+          "verdict": "conforms",
+          "detail": "got Medium, allowed Low | Medium"
+        },
+        {
+          "name": "owner_consistency",
+          "verdict": "conforms",
+          "detail": "owner Finance for category Billing"
+        },
+        {
+          "name": "safety_override",
+          "verdict": "conforms",
+          "detail": "no escalation, no policy adjustment"
+        },
+        {
+          "name": "evidence_validity",
+          "verdict": "conforms",
+          "detail": "1/1 quotes verified"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "Other-implies-review holds (needsReview false)"
+        }
+      ],
+      "verdict": "conforms",
+      "durationMs": 2147
+    },
+    {
+      "caseId": "edge-mixed-intent",
+      "pass": 3,
+      "status": "completed",
+      "category": "Sales",
+      "priority": "High",
+      "owner": "Sales Team",
+      "needsReview": true,
+      "escalated": false,
+      "adjustmentFields": [],
+      "evidenceCount": 2,
+      "checks": [
+        {
+          "name": "category",
+          "verdict": "does_not_conform",
+          "detail": "got Sales, allowed Billing",
+          "cause": "prompt_model_judgment"
+        },
+        {
+          "name": "priority",
+          "verdict": "conforms",
+          "detail": "got High, allowed Medium | High"
+        },
+        {
+          "name": "owner_consistency",
+          "verdict": "conforms",
+          "detail": "owner Sales Team for category Sales"
+        },
+        {
+          "name": "evidence_validity",
+          "verdict": "conforms",
+          "detail": "2/2 quotes verified"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "Other-implies-review holds (needsReview true)"
+        }
+      ],
+      "verdict": "does_not_conform",
+      "durationMs": 2245
+    },
+    {
+      "caseId": "edge-non-english",
+      "pass": 3,
+      "status": "completed",
+      "category": "Technical",
+      "priority": "Urgent",
+      "owner": "Engineering",
+      "needsReview": false,
+      "escalated": false,
+      "adjustmentFields": [],
+      "evidenceCount": 2,
+      "checks": [
+        {
+          "name": "category",
+          "verdict": "conforms",
+          "detail": "got Technical, allowed Technical"
+        },
+        {
+          "name": "priority",
+          "verdict": "conforms",
+          "detail": "got Urgent, allowed Urgent"
+        },
+        {
+          "name": "owner_consistency",
+          "verdict": "conforms",
+          "detail": "owner Engineering for category Technical"
+        },
+        {
+          "name": "safety_override",
+          "verdict": "conforms",
+          "detail": "Technical/Urgent/Engineering"
+        },
+        {
+          "name": "evidence_validity",
+          "verdict": "conforms",
+          "detail": "2/2 quotes verified"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "Other-implies-review holds (needsReview false)"
+        }
+      ],
+      "verdict": "conforms",
+      "durationMs": 2508
+    },
+    {
+      "caseId": "edge-single-user-login",
+      "pass": 3,
+      "status": "completed",
+      "category": "Support",
+      "priority": "Medium",
+      "owner": "Client Success",
+      "needsReview": false,
+      "escalated": false,
+      "adjustmentFields": [],
+      "evidenceCount": 1,
+      "checks": [
+        {
+          "name": "category",
+          "verdict": "conforms",
+          "detail": "got Support, allowed Support"
+        },
+        {
+          "name": "priority",
+          "verdict": "conforms",
+          "detail": "got Medium, allowed Low | Medium"
+        },
+        {
+          "name": "owner_consistency",
+          "verdict": "conforms",
+          "detail": "owner Client Success for category Support"
+        },
+        {
+          "name": "safety_override",
+          "verdict": "conforms",
+          "detail": "no escalation, no policy adjustment"
+        },
+        {
+          "name": "evidence_validity",
+          "verdict": "conforms",
+          "detail": "1/1 quotes verified"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "Other-implies-review holds (needsReview false)"
+        }
+      ],
+      "verdict": "conforms",
+      "durationMs": 2072
+    },
+    {
+      "caseId": "edge-systemic-login",
+      "pass": 3,
+      "status": "completed",
+      "category": "Technical",
+      "priority": "Urgent",
+      "owner": "Engineering",
+      "needsReview": false,
+      "escalated": false,
+      "adjustmentFields": [],
+      "evidenceCount": 2,
+      "checks": [
+        {
+          "name": "category",
+          "verdict": "conforms",
+          "detail": "got Technical, allowed Technical"
+        },
+        {
+          "name": "priority",
+          "verdict": "conforms",
+          "detail": "got Urgent, allowed Urgent"
+        },
+        {
+          "name": "owner_consistency",
+          "verdict": "conforms",
+          "detail": "owner Engineering for category Technical"
+        },
+        {
+          "name": "safety_override",
+          "verdict": "conforms",
+          "detail": "Technical/Urgent/Engineering"
+        },
+        {
+          "name": "evidence_validity",
+          "verdict": "conforms",
+          "detail": "2/2 quotes verified"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "Other-implies-review holds (needsReview false)"
+        }
+      ],
+      "verdict": "conforms",
+      "durationMs": 2036
+    },
+    {
+      "caseId": "edge-data-exposure",
+      "pass": 3,
+      "status": "completed",
+      "category": "Technical",
+      "priority": "Urgent",
+      "owner": "Engineering",
+      "needsReview": true,
+      "escalated": true,
+      "adjustmentFields": [],
+      "evidenceCount": 2,
+      "checks": [
+        {
+          "name": "category",
+          "verdict": "conforms",
+          "detail": "got Technical, allowed Technical"
+        },
+        {
+          "name": "priority",
+          "verdict": "conforms",
+          "detail": "got Urgent, allowed Urgent"
+        },
+        {
+          "name": "owner_consistency",
+          "verdict": "conforms",
+          "detail": "owner Engineering for category Technical"
+        },
+        {
+          "name": "safety_override",
+          "verdict": "conforms",
+          "detail": "Technical/Urgent/Engineering"
+        },
+        {
+          "name": "evidence_validity",
+          "verdict": "conforms",
+          "detail": "2/2 quotes verified"
+        },
+        {
+          "name": "review_state",
+          "verdict": "conforms",
+          "detail": "Other-implies-review holds (needsReview true)"
+        }
+      ],
+      "verdict": "conforms",
+      "durationMs": 1995
+    }
+  ]
+}
