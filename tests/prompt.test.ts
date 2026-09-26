@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { buildUserPrompt, SYSTEM_PROMPT } from "../lib/prompt";
-import { CATEGORIES, PRIORITIES } from "../lib/taxonomy";
+import { CATEGORIES, CATEGORY_TIE_BREAKERS, PRIORITIES } from "../lib/taxonomy";
 
 describe("SYSTEM_PROMPT", () => {
   it("names every category and priority", () => {
@@ -19,6 +19,26 @@ describe("SYSTEM_PROMPT", () => {
   it("states the verbatim-evidence and 150-word rules", () => {
     expect(SYSTEM_PROMPT).toMatch(/verbatim/i);
     expect(SYSTEM_PROMPT).toMatch(/150 words/);
+  });
+
+  it("presents the tie-breakers as ordered precedence and includes mixed-intent guidance", () => {
+    expect(SYSTEM_PROMPT).toMatch(/first one that applies wins/i);
+    expect(SYSTEM_PROMPT).toMatch(/identify every intent/i);
+    expect(SYSTEM_PROMPT).toMatch(/exactly one category/i);
+    expect(SYSTEM_PROMPT).toMatch(/never outranks an existing-money issue/i);
+    for (const rule of CATEGORY_TIE_BREAKERS) expect(SYSTEM_PROMPT).toContain(rule);
+  });
+
+  it("lists tie-breakers in taxonomy order", () => {
+    const positions = CATEGORY_TIE_BREAKERS.map((rule) => SYSTEM_PROMPT.indexOf(rule));
+    expect(positions.every((p) => p >= 0)).toBe(true);
+    expect([...positions].sort((a, b) => a - b)).toEqual(positions);
+  });
+
+  it("separates severity from the review requirement", () => {
+    expect(SYSTEM_PROMPT).toMatch(/severity is not a review reason/i);
+    expect(SYSTEM_PROMPT).toMatch(/escalates it automatically/i);
+    expect(SYSTEM_PROMPT).toMatch(/clear and complete, set needsReview to false/i);
   });
 
   it("does not ask for confidence scores", () => {
