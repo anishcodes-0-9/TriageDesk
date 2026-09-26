@@ -12,3 +12,6 @@ out/
 
 # Logs
 *.log
+# Next.js / TypeScript
+next-env.d.ts
+*.tsbuildinfo
