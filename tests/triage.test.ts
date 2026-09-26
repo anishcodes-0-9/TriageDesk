@@ -156,3 +156,16 @@ describe("provider failures", () => {
     });
   });
 });
+
+describe("input validation precedes configuration", () => {
+  it("rejects over-length input with INPUT_TOO_LONG even when config is unavailable", async () => {
+    const saved = process.env.GEMINI_API_KEY;
+    delete process.env.GEMINI_API_KEY;
+    try {
+      await expect(triage("x".repeat(4001))).rejects.toMatchObject({ code: "INPUT_TOO_LONG" });
+      await expect(triage("   ")).rejects.toMatchObject({ code: "INVALID_INPUT" });
+    } finally {
+      if (saved !== undefined) process.env.GEMINI_API_KEY = saved;
+    }
+  });
+});

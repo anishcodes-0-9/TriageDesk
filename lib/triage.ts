@@ -1,5 +1,5 @@
 import { analyze } from "./analyze";
-import { getConfig, type Config } from "./config";
+import { getConfig, MAX_INPUT_CHARS, type Config } from "./config";
 import { TriageError } from "./errors";
 import { callGemini, type LlmCall } from "./llm";
 import { applyPolicy } from "./policy";
@@ -23,10 +23,13 @@ export async function triage(input: unknown, options: TriageOptions = {}): Promi
   }
   const requestText = input.trim();
 
-  const config = options.config ?? getConfig();
-  if (requestText.length > config.maxInputChars) {
-    throw new TriageError("INPUT_TOO_LONG", `Request text must be at most ${config.maxInputChars} characters.`);
+  // Input is rejected before configuration or provider access is needed.
+  const maxChars = options.config?.maxInputChars ?? MAX_INPUT_CHARS;
+  if (requestText.length > maxChars) {
+    throw new TriageError("INPUT_TOO_LONG", `Request text must be at most ${maxChars} characters.`);
   }
+
+  const config = options.config ?? getConfig();
 
   let call = options.call;
   if (!call) {

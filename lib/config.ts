@@ -13,6 +13,9 @@ export type Config = {
 
 const DEFAULT_MODEL = "gemini-3.5-flash-lite";
 
+/** Single source of truth for the input limit. Needs no environment, so input can be checked before config. */
+export const MAX_INPUT_CHARS = 4000;
+
 /**
  * Read and validate config on demand, never at import time, so tests and
  * `next build` work without a Gemini key. The key is only required in live
@@ -34,7 +37,7 @@ export function getConfig(env: NodeJS.ProcessEnv = process.env): Config {
     model: env.LLM_MODEL?.trim() || DEFAULT_MODEL,
     mode: rawMode,
     timeoutMs: 12_000,
-    maxInputChars: 4000,
+    maxInputChars: MAX_INPUT_CHARS,
     maxOutputTokens: 2048,
   };
 }
