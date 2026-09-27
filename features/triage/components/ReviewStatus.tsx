@@ -17,7 +17,7 @@ export function ReviewStatus({ needsReview, reviewReason }: ReviewStatusProps) {
   return (
     <div className="flex flex-col gap-1 text-sm">
       <Badge label={meta.label} tone={meta.tone} />
-      {reviewReason !== null && <p className="text-text-muted">{reviewReason}</p>}
+      {reviewReason !== null && <p className="break-words text-text-muted">{reviewReason}</p>}
     </div>
   );
 }

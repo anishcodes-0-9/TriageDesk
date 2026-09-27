@@ -248,4 +248,15 @@ describe("TriageWorkspace", () => {
     expect(screen.getByText("Distinctive Result A summary")).toBeInTheDocument();
     expect(screen.getByText("Distinctive draft A")).toBeInTheDocument();
   });
+
+  it("wraps a long, unbroken error message in the visible error presentation instead of overflowing", () => {
+    const submit = vi.fn();
+    const error = new TriageClientError("a".repeat(200));
+    useTriageSubmissionMock.mockReturnValue({ state: { status: "error", error, previousResult: null }, submit });
+    render(<TriageWorkspace />);
+
+    const errorHeading = screen.getByText("Something went wrong");
+    const visibleMessage = (errorHeading.parentElement as HTMLElement).querySelector("p:last-child");
+    expect(visibleMessage).toHaveClass("break-words");
+  });
 });

@@ -35,7 +35,7 @@ export function TriageResultView({ result }: TriageResultViewProps) {
         <h3 id={summaryHeadingId} className="text-sm font-medium text-text">
           Summary
         </h3>
-        <p className="text-sm text-text-muted">{result.summary}</p>
+        <p className="break-words text-sm text-text-muted">{result.summary}</p>
       </section>
       <RequestMeta category={result.category} owner={result.owner} />
       <PriorityIndicator priority={result.priority} priorityReason={result.priorityReason} />

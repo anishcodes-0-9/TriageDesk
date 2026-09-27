@@ -21,7 +21,7 @@ export function PriorityIndicator({ priority, priorityReason }: PriorityIndicato
         <span className="text-text-muted">Priority</span>
         <Badge label={meta.label} tone={meta.tone} />
       </div>
-      <p className="text-text-muted">
+      <p className="break-words text-text-muted">
         <span className="font-medium text-text">Reason: </span>
         {priorityReason}
       </p>

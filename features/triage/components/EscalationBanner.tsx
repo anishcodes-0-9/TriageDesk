@@ -22,8 +22,8 @@ export function EscalationBanner({ escalation }: EscalationBannerProps) {
 
   return (
     <div className="rounded-md border border-status-danger-border bg-status-danger px-3 py-2 text-sm text-status-danger-foreground">
-      <p className="font-medium">Escalation</p>
-      <p>{escalation}</p>
+      <h3 className="font-medium">Escalation</h3>
+      <p className="break-words">{escalation}</p>
     </div>
   );
 }

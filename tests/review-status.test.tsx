@@ -38,4 +38,10 @@ describe("ReviewStatus", () => {
     render(<ReviewStatus needsReview={false} reviewReason="x" />);
     expect(screen.getByText(reviewDisplay(false).label)).toBeInTheDocument();
   });
+
+  it("wraps a long, unbroken reviewReason string instead of overflowing", () => {
+    const reason = "a".repeat(200);
+    render(<ReviewStatus needsReview={true} reviewReason={reason} />);
+    expect(screen.getByText(reason)).toHaveClass("break-words");
+  });
 });

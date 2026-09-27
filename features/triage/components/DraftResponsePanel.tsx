@@ -10,9 +10,9 @@ export type DraftResponsePanelProps = {
 export function DraftResponsePanel({ draftResponse }: DraftResponsePanelProps) {
   return (
     <div className="flex flex-col gap-1 text-sm">
-      <p className="font-medium text-text">Draft response (for review)</p>
+      <h3 className="font-medium text-text">Draft response (for review)</h3>
       <p className="text-text-muted">This draft has not been sent. Review and send it yourself if appropriate.</p>
-      <p className="whitespace-pre-wrap text-text">{draftResponse}</p>
+      <p className="whitespace-pre-wrap break-words text-text">{draftResponse}</p>
     </div>
   );
 }

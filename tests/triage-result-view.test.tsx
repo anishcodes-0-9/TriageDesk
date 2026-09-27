@@ -150,4 +150,10 @@ describe("TriageResultView", () => {
     expect(screen.getByText(FULL_RESULT.escalation as string)).toBeInTheDocument();
     expect(screen.getByText(FULL_RESULT.draftResponse)).toBeInTheDocument();
   });
+
+  it("wraps a long, unbroken summary string instead of overflowing", () => {
+    const result: TriageResult = { ...FULL_RESULT, summary: "a".repeat(200) };
+    render(<TriageResultView result={result} />);
+    expect(screen.getByText(result.summary)).toHaveClass("break-words");
+  });
 });

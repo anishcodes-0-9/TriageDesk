@@ -37,4 +37,15 @@ describe("DraftResponsePanel", () => {
     expect(screen.queryByRole("button")).not.toBeInTheDocument();
     expect(screen.queryByRole("textbox")).not.toBeInTheDocument();
   });
+
+  it("labels itself with a real heading, so it is reachable by heading navigation", () => {
+    render(<DraftResponsePanel draftResponse="A draft." />);
+    expect(screen.getByRole("heading", { name: "Draft response (for review)" })).toBeInTheDocument();
+  });
+
+  it("wraps a long, unbroken draft string instead of overflowing", () => {
+    const draft = "a".repeat(200);
+    render(<DraftResponsePanel draftResponse={draft} />);
+    expect(screen.getByText(draft)).toHaveClass("break-words");
+  });
 });

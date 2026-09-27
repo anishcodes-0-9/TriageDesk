@@ -75,10 +75,16 @@ export function TriageWorkspace() {
         <div
           ref={errorRef}
           tabIndex={-1}
-          className="rounded-md border border-status-danger-border bg-status-danger px-3 py-2 text-sm text-status-danger-foreground outline-none focus-visible:ring-2 focus-visible:ring-focus-ring"
+          // Plain `:focus`, not `:focus-visible`: this element is only ever
+          // focused programmatically (never by a mouse click on itself), so
+          // there is no "ring after every click" downside to avoid, and
+          // `:focus-visible`'s heuristic for programmatic focus is not
+          // reliable enough across browsers for an error a keyboard user
+          // must be able to see land.
+          className="rounded-md border border-status-danger-border bg-status-danger px-3 py-2 text-sm text-status-danger-foreground outline-none focus:ring-2 focus:ring-focus-ring"
         >
           <p className="font-medium">Something went wrong</p>
-          <p>{errorMessage}</p>
+          <p className="break-words">{errorMessage}</p>
         </div>
       )}
 

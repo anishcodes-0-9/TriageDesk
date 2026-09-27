@@ -33,4 +33,10 @@ describe("PriorityIndicator", () => {
     render(<PriorityIndicator priority="Medium" priorityReason={reason} />);
     expect(screen.getByText(reason)).toBeInTheDocument();
   });
+
+  it("wraps a long, unbroken reason string instead of overflowing", () => {
+    const reason = "a".repeat(200);
+    render(<PriorityIndicator priority="Medium" priorityReason={reason} />);
+    expect(screen.getByText(reason)).toHaveClass("break-words");
+  });
 });

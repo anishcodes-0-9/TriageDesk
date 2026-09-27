@@ -39,4 +39,15 @@ describe("EscalationBanner", () => {
     expect(screen.queryByRole("status")).not.toBeInTheDocument();
     expect(screen.queryByRole("alert")).not.toBeInTheDocument();
   });
+
+  it("labels itself with a real heading, so it is reachable by heading navigation", () => {
+    render(<EscalationBanner escalation="An escalation note." />);
+    expect(screen.getByRole("heading", { name: "Escalation" })).toBeInTheDocument();
+  });
+
+  it("wraps a long, unbroken escalation string instead of overflowing", () => {
+    const escalation = "a".repeat(200);
+    render(<EscalationBanner escalation={escalation} />);
+    expect(screen.getByText(escalation)).toHaveClass("break-words");
+  });
 });
