@@ -207,4 +207,13 @@ export const CASES: readonly EvalCase[] = [
     basis:
       "Data exposure is a hard override: Technical, Urgent, Engineering, with an escalation note. needsReview is deliberately unconstrained: the frozen rules only fix needsReview for request 05 and for category Other, and policy never sets it for a data-exposure case, so nothing here determines it. Variation in needsReview is reported under stability, not treated as conformance.",
   },
+  {
+    id: "edge-recruiting",
+    group: "edge",
+    label: "Recruiter outreach",
+    text: "Hi, I'm a technical recruiter and I have a great opportunity I think your engineers would love. Can I set up a call to tell your team more about it?",
+    expect: { category: ["Other"], priority: ["Low", "Medium"], needsReview: true },
+    basis:
+      "Recruiting is a named Other example in the taxonomy and does not fit the business categories; policy forces needsReview for category Other regardless of the model's own judgment.",
+  },
 ];

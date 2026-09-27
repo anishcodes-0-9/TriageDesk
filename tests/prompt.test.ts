@@ -44,6 +44,33 @@ describe("SYSTEM_PROMPT", () => {
   it("does not ask for confidence scores", () => {
     expect(SYSTEM_PROMPT).not.toMatch(/confidence/i);
   });
+
+  it("tells the model it is not an autonomous agent and must not invent completed or promised actions", () => {
+    expect(SYSTEM_PROMPT).toMatch(/not an autonomous agent/i);
+    expect(SYSTEM_PROMPT).toMatch(/never promise that a person or team will do one of those things in the future/i);
+    // The rule must explicitly cover data exposure and outages, not carve
+    // them out — that carve-out was the root cause of the invented
+    // "the team will look into it right away" commitments.
+    expect(SYSTEM_PROMPT).toMatch(/including for data exposure or an outage/i);
+  });
+
+  it("gives concrete examples of the promised-action phrasing to avoid", () => {
+    const prompt = SYSTEM_PROMPT.toLowerCase();
+    for (const phrase of ["we will", "we'll", "our team will", "will look into", "will follow up", "will investigate"]) {
+      expect(prompt).toContain(phrase);
+    }
+    expect(SYSTEM_PROMPT).toMatch(/vague temporal words/i);
+  });
+
+  it("no longer instructs the draft to promise a follow-up for data exposure", () => {
+    // This exact sentence in the prior prompt was the root cause of drafts
+    // like "Our team will look into this issue right away."
+    expect(SYSTEM_PROMPT).not.toMatch(/say the team will look into it right away/i);
+  });
+
+  it("allows asking up to 3 concise questions instead of promising action", () => {
+    expect(SYSTEM_PROMPT).toMatch(/at most 3 concise questions/i);
+  });
 });
 
 describe("buildUserPrompt", () => {
