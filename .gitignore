@@ -15,3 +15,5 @@ out/
 # Next.js / TypeScript
 next-env.d.ts
 *.tsbuildinfo
+.vercel
+.env*
