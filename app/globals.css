@@ -1,1 +1,13 @@
 @import "tailwindcss";
+@import "./tokens.css";
+
+/*
+ * Tailwind v4 only keeps @theme variables that are actually referenced
+ * somewhere in the build, so this base rule both applies the document's
+ * default surface/text colors and proves the token layer compiles and is
+ * loaded. Component-level token usage comes in later steps.
+ */
+body {
+  background-color: var(--color-canvas);
+  color: var(--color-text);
+}

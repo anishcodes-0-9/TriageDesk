@@ -1,0 +1,57 @@
+/**
+ * Semantic design tokens for TriageDesk.
+ *
+ * These describe UI meaning (surface, text, border, focus, status) — never
+ * triage-domain concepts. Category/priority/owner/needsReview values are
+ * translated into one of the five status tones below by the triage feature's
+ * display mapping (a later step); this file has no knowledge that "Urgent"
+ * or "Technical" exist.
+ *
+ * Defined inside Tailwind v4's `@theme` so each variable is also a regular
+ * utility, e.g. `bg-surface`, `text-text-muted`, `border-border`,
+ * `ring-focus-ring`, `bg-status-danger`, `text-status-danger-foreground`.
+ */
+@theme {
+  /* Surfaces */
+  --color-canvas: #f8fafc;
+  --color-surface: #ffffff;
+  --color-surface-muted: #f1f5f9;
+
+  /* Text */
+  --color-text: #0f172a;
+  --color-text-muted: #475569;
+  --color-text-inverse: #ffffff;
+
+  /* Borders */
+  --color-border: #cbd5e1;
+  --color-border-subtle: #e2e8f0;
+
+  /* Focus */
+  --color-focus-ring: #2563eb;
+
+  /*
+   * Status: neutral / info / positive / warning / danger only. Each tone has
+   * a fill, a foreground for text/icons placed on that fill, and a border.
+   * Nothing here names a priority, category or owner — a status tone is
+   * chosen for a domain value elsewhere, never defined by one here.
+   */
+  --color-status-neutral: #f1f5f9;
+  --color-status-neutral-foreground: #334155;
+  --color-status-neutral-border: #cbd5e1;
+
+  --color-status-info: #dbeafe;
+  --color-status-info-foreground: #1e3a8a;
+  --color-status-info-border: #93c5fd;
+
+  --color-status-positive: #dcfce7;
+  --color-status-positive-foreground: #14532d;
+  --color-status-positive-border: #86efac;
+
+  --color-status-warning: #fef3c7;
+  --color-status-warning-foreground: #78350f;
+  --color-status-warning-border: #fcd34d;
+
+  --color-status-danger: #fee2e2;
+  --color-status-danger-foreground: #7f1d1d;
+  --color-status-danger-border: #fca5a5;
+}
