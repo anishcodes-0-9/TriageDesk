@@ -42,7 +42,19 @@ export function TriageResultView({ result }: TriageResultViewProps) {
       <ReviewStatus needsReview={result.needsReview} reviewReason={result.reviewReason} />
       <EvidenceList evidence={result.evidence} />
       <EscalationBanner escalation={result.escalation} />
-      <DraftResponsePanel draftResponse={result.draftResponse} />
+      {/*
+        A single, selective separator: Summary/RequestMeta/PriorityIndicator/
+        ReviewStatus/EvidenceList/EscalationBanner all already carry their own
+        visual cue (a heading, a badge, a bordered quote box, or a danger-tone
+        banner), so a divider between them would be redundant. The draft
+        response is the one plain-text section with no such cue and is
+        conceptually distinct (the actionable output vs. the analysis above
+        it), so it alone gets a hairline break using the existing
+        border-subtle token.
+      */}
+      <div className="border-t border-border-subtle pt-6">
+        <DraftResponsePanel draftResponse={result.draftResponse} />
+      </div>
     </section>
   );
 }

@@ -63,7 +63,7 @@ export function RequestForm({ onSubmit, disabled = false }: RequestFormProps) {
         rows={6}
         aria-describedby={hasError ? `${helpId} ${errorId}` : helpId}
         aria-invalid={hasError}
-        className="w-full rounded-md border border-border bg-surface px-3 py-2 text-sm text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus-ring disabled:cursor-not-allowed disabled:opacity-60"
+        className="w-full rounded-md border border-border bg-surface px-3 py-2 text-sm text-text transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus-ring disabled:cursor-not-allowed disabled:opacity-60"
       />
       {hasError && (
         <p id={errorId} className="text-sm text-status-danger-foreground">
@@ -73,7 +73,7 @@ export function RequestForm({ onSubmit, disabled = false }: RequestFormProps) {
       <button
         type="submit"
         disabled={disabled}
-        className="self-start rounded-md border border-border bg-surface px-4 py-2 text-sm font-medium text-text hover:bg-surface-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus-ring disabled:cursor-not-allowed disabled:opacity-60"
+        className="self-start rounded-md border border-border bg-surface px-4 py-2 text-sm font-medium text-text transition-colors hover:bg-surface-muted active:bg-border-subtle focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus-ring disabled:cursor-not-allowed disabled:opacity-60"
       >
         Analyze request
       </button>

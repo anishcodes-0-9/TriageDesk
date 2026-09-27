@@ -11,3 +11,31 @@ body {
   background-color: var(--color-canvas);
   color: var(--color-text);
 }
+
+/*
+ * Entrance animation for a freshly successful triage result: a very subtle
+ * fade + upward nudge, not a transform-heavy effect. Applied by
+ * TriageWorkspace only when a result just became visible via a successful
+ * submission (never on the de-emphasized previous-result path), so it plays
+ * once per new result rather than on every re-render.
+ */
+@keyframes result-enter {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.result-enter {
+  animation: result-enter 170ms ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .result-enter {
+    animation: none;
+  }
+}

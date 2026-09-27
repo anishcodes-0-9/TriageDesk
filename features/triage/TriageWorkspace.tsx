@@ -89,7 +89,12 @@ export function TriageWorkspace() {
       )}
 
       {visibleResult && (
-        <div data-deemphasized={isDeEmphasized} className={isDeEmphasized ? "opacity-60" : undefined}>
+        <div
+          data-deemphasized={isDeEmphasized}
+          className={`transition-opacity duration-200 ${isDeEmphasized ? "opacity-60" : ""} ${
+            isSuccess ? "result-enter" : ""
+          }`}
+        >
           <TriageResultView result={visibleResult} />
         </div>
       )}
